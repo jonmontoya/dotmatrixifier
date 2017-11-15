@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'DotMatrix';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/DOTMATRI.TTF') format('truetype');
+}
+
+.jmt_dotmatrixifier_main_wrapper {
+  border: dotted black 3px;
+  display: flex;
+  flex-flow: column;
+  font-family: DotMatrix, monospace;
+  font-size: 26px;
+  height: 400px;
+  text-align: center;
+  width: 400px;
+}
+
+.jmt_dotmatrixifier_main_title {
+  display: block;
+  font-size: 30px;
+  letter-spacing: 6px;
+  margin: 26px 0 0 0;
+}
+
+.jmt_dotmatrixifier_drop_zone {
+  border: dotted black 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.jmt_dotmatrixifier_process {
+  display: flex;
+  flex-flow: column;
+  height: 300px;
+  margin: auto;
+  width: 231px;
+
+  &.done {
+    cursor: pointer;
+  }
+
+  &.done .jmt_dotmatrixifier_process_title {
+    animation: none;
+  }
+}
+
+@keyframes jmt_dotmatrixifier_loading {
+  from {opacity: .1;}
+  to {opacity: 1;}
+}
+
+.jmt_dotmatrixifier_process_title {
+  animation-direction: alternate;
+  animation: jmt_dotmatrixifier_loading 1s infinite;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+  margin-top: 72px;
+}
+
+.jmt_dotmatrixifier_process_sub_title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+.jmt_dotmatrixifier_preview_image {
+  border: 1px black solid;
+  height: 300px;
+  position: absolute;
+  width: 231px;
+  z-index: -2;
+}
