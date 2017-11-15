@@ -46,7 +46,7 @@ const Main = ({
           className="jmt_dotmatrixifier_drop_zone"
         >
           <div>
-            <p>Drag and Drop Image Here</p>
+            <p>Drag and Drop Image</p>
             <p>or</p>
             <p>Click to Select</p>
           </div>
